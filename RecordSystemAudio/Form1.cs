@@ -21,7 +21,7 @@ namespace RecordSystemAudio
             var saveDialog = new SaveFileDialog();
             saveDialog.Filter = "Wave files | *.wav";
 
-            if (saveDialog.ShowDialog() == DialogResult.OK)
+            if (saveDialog.ShowDialog() is not DialogResult.OK)
                 return;
 
             _outputFilename = saveDialog.FileName;
@@ -36,7 +36,7 @@ namespace RecordSystemAudio
             _wasapiLoopbackCapture.RecordingStopped += (s, e) =>
             {
                 _waveFileWriter.Dispose();
-                _wasapiLoopbackCapture?.Dispose();
+                _wasapiLoopbackCapture.Dispose();
                 btnStart.Enabled = true;
                 btnStop.Enabled = false;
 
@@ -56,7 +56,8 @@ namespace RecordSystemAudio
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-
+            if (_wasapiLoopbackCapture != null)
+                _wasapiLoopbackCapture.StopRecording();
         }
 
         private void LoadDevices()
