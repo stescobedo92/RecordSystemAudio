@@ -28,18 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label1 = new Label();
+            cbOutputDevice = new ComboBox();
+            btnStart = new Button();
+            btnStop = new Button();
             SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(120, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Select Output Device:";
+            // 
+            // cbOutputDevice
+            // 
+            cbOutputDevice.FormattingEnabled = true;
+            cbOutputDevice.Location = new Point(135, 16);
+            cbOutputDevice.Name = "cbOutputDevice";
+            cbOutputDevice.Size = new Size(290, 23);
+            cbOutputDevice.TabIndex = 1;
+            // 
+            // btnStart
+            // 
+            btnStart.Location = new Point(315, 57);
+            btnStart.Name = "btnStart";
+            btnStart.Size = new Size(52, 23);
+            btnStart.TabIndex = 2;
+            btnStart.Text = "Start";
+            btnStart.UseVisualStyleBackColor = true;
+            // 
+            // btnStop
+            // 
+            btnStop.Location = new Point(373, 57);
+            btnStop.Name = "btnStop";
+            btnStop.Size = new Size(52, 23);
+            btnStop.TabIndex = 3;
+            btnStop.Text = "Stop";
+            btnStop.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(604, 284);
+            ClientSize = new Size(441, 93);
+            Controls.Add(btnStop);
+            Controls.Add(btnStart);
+            Controls.Add(cbOutputDevice);
+            Controls.Add(label1);
             Name = "Form1";
             Text = "Record System Audio";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
+        private ComboBox cbOutputDevice;
+        private Button btnStart;
+        private Button btnStop;
     }
 }
