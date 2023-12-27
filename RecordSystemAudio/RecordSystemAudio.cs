@@ -4,13 +4,13 @@ using System.Diagnostics;
 
 namespace RecordSystemAudio
 {
-    public partial class Form1 : Form
+    public partial class RecordSystemAudio : Form
     {
         private string? _outputFilename;
         private WasapiLoopbackCapture _wasapiLoopbackCapture;
         private WaveFileWriter _waveFileWriter;
 
-        public Form1()
+        public RecordSystemAudio()
         {
             InitializeComponent();
             LoadDevices();

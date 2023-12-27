@@ -1,6 +1,6 @@
 ﻿namespace RecordSystemAudio
 {
-    partial class Form1
+    partial class RecordSystemAudio
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecordSystemAudio));
             label1 = new Label();
             cbOutputDevice = new ComboBox();
             btnStart = new Button();
@@ -71,7 +72,7 @@
             btnStop.UseVisualStyleBackColor = true;
             btnStop.Click += btnStop_Click;
             // 
-            // Form1
+            // RecordSystemAudio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -80,7 +81,8 @@
             Controls.Add(btnStart);
             Controls.Add(cbOutputDevice);
             Controls.Add(label1);
-            Name = "Form1";
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "RecordSystemAudio";
             Text = "Record System Audio";
             ResumeLayout(false);
             PerformLayout();
