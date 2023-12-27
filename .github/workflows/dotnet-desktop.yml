@@ -14,8 +14,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      Solution_Name: RecordSystemAudio/RecordSystemAudio.sln
-      Wap_Project_Directory: RecordSystemAudio/RecordSystemAudio/
+      Solution_Name: RecordSystemAudio.sln
       Wap_Project_Path: RecordSystemAudio/RecordSystemAudio/RecordSystemAudio.csproj
 
     steps:
